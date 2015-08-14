@@ -6,11 +6,11 @@ void setup() {
 void loop() {
   char c;
   while(true){
-    if(Serial.available()>0){
-      c=Serial.read();
-      c=toupper(c);
+    if(Serial.available()>0){ //Ciclo donde se valida que ese serial se mayor que cero
+      c=Serial.read();//el char es leido
+      c=toupper(c);//convierte el caracter a mayuscula.
 
-      switch(c){
+      switch(c){ //Ciclo con una serie de posibilidades donde de acuerdo a la opcion nos dice algo
         case 'A':
         Serial.println("Great job");
         break;
@@ -24,7 +24,7 @@ void loop() {
         case 'F':
         Serial.println("See you again next semester.");
         break;
-        default;
+        default:
         Serial.println("You can't even follo instructions?");
         break;
       }
